@@ -2,8 +2,13 @@
 require '../../session_check.php';
 require '../../config/database.php';
 
-$orders = mysqli_query($conn, "SELECT * FROM orders ORDER BY order_date DESC");
-?>
+// Query baru dengan JOIN (menggabungkan tabel orders dan users):
+$query = "SELECT orders.*, users.username AS customer_name 
+          FROM orders 
+          INNER JOIN users ON orders.user_id = users.id 
+          ORDER BY order_date DESC";
+
+$orders = mysqli_query($conn, $query);?>
 
 <!DOCTYPE html>
 <html lang="id">
