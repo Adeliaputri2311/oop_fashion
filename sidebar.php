@@ -18,29 +18,29 @@ $current_url = $_SERVER['REQUEST_URI'];
 
 <div class="sidebar-wrapper">
     <div class="sidebar-content d-flex flex-column">
-        <a href="/fashion-app/index.php" class="brand-section">JENSTORE.</a>
+        <a href="/wepAdel/oop_fashion/index.php" class="brand-section">JENSTORE.</a>
         
         <ul class="nav-menu flex-grow-1">
             <li class="nav-item">
-                <a href="/fashion-app/index.php" 
+                <a href="/wepAdel/oop_fashion/index.php" 
                    class="nav-link-custom <?= (basename($current_url) == 'index.php' && !strpos($current_url, 'modules')) ? 'active' : '' ?>">
                     <span class="nav-icon">🏠</span> Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/fashion-app/modules/products/index.php" 
+                <a href="/wepAdel/oop_fashion/modules/products/index.php" 
                    class="nav-link-custom <?= (strpos($current_url, 'modules/products') !== false) ? 'active' : '' ?>">
                     <span class="nav-icon">🛍️</span> Collections
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/fashion-app/modules/categories/index.php" 
+                <a href="/wepAdel/oop_fashion/modules/categories/index.php" 
                 class="nav-link-custom <?= (strpos($current_url, 'modules/categories') !== false) ? 'active' : '' ?>">
                     <span class="nav-icon">🎀</span> Categories
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/fashion-app/modules/orders/index.php" 
+                <a href="/wepAdel/oop_fashion/modules/orders/index.php" 
                 class="nav-link-custom <?= (strpos($current_url, 'modules/orders') !== false) ? 'active' : '' ?>">
                     <span class="nav-icon">🧾</span> Orders
                 </a>
@@ -52,7 +52,7 @@ $current_url = $_SERVER['REQUEST_URI'];
                 <small class="text-muted d-block" style="font-size: 0.7rem;">LOGGED IN AS</small>
                 <strong style="color: var(--primary-rose)"><?= strtoupper($_SESSION['username']); ?></strong>
             </div>
-            <a href="/fashion-app/modules/auth/logout.php" class="nav-link-custom text-danger">
+            <a href="/wepAdel/oop_fashion/modules/auth/logout.php" class="nav-link-custom text-danger">
                 <span class="nav-icon">🚪</span> Logout
             </a>
         </div>
